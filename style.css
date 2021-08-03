@@ -17,11 +17,17 @@
 	margin-top: 200px;
 }
 
+.towers {
+	width: 200px;
+	display: flex;
+	justify-content: center;
+}
+
 .palito {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-
+	max-width: 160px;
 }
 
 .palito {
