@@ -3,10 +3,15 @@
 	padding: 0;
 }
 
+body {
+	display: flex;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
 .conteiner {
 	display:flex;
-	align-items:flex-end;
-	justify-content: space-evenly;
+	justify-content: center;
 	grid-template-columns: 1fr 1fr 1fr;
 	width: 800px;
 	height: 400px;
@@ -18,34 +23,24 @@
 }
 
 .towers {
-	width: 200px;
-	display: flex;
-	justify-content: center;
+	width: 100%;
+	height: 100%;
+	display: flex; 
+	flex-direction: column-reverse; 
+	align-items: center;
 }
 
 .palito {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	max-width: 160px;
-}
-
-.palito {
-	border-radius: 10px;
-	width: 8px;
-	height: 300px;
-	background-color:black;
-}
-
-.contdisco {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
+	justify-content: flex-end;
+	background-color: black;
+	height: 200px;
+	width: 10px;
 }
+
 .disco {
-	background-color: blue;
-	width: 150px;
 	height: 20px;
 	border: 1px solid;
 	border-radius: 10px;
@@ -54,28 +49,26 @@
 
 .c1 {
 	margin: 1px;
-	bottom: 60px;
 	width: 90px;
 	background-color: chartreuse;
 }
 
 .c2 {
 	margin: 1px;
-	bottom: 40px;
 	width: 110px;
 	background-color: brown;
 }
 
 .c3 {
 	margin: 1px;
-	bottom: 20px;
 	width: 130px;
 	background-color: blueviolet;
 }
 
 .c4 {
-	margin: 0;
-	bottom: 0;
+
+	background-color: blue;
+	width: 150px;
 }
 
 .msg {
@@ -102,7 +95,7 @@ span {
 
 
 @media screen and (max-width: 768px) {
-	body {
-		transform: rotate(90deg);
+	.conteiner {
+		min-width: 150px;
 	}
 }
