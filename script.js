@@ -20,33 +20,123 @@ conteiner1.addEventListener('click', getDisc);
 conteiner2.addEventListener('click', getDisc);
 conteiner3.addEventListener('click', getDisc);
 
-let holder = null;
 
+let holder = '';
 function getDisc(event) {
+
+if (holder === null) {
+  holder = '';
+}
+
+let firstChild =  event.currentTarget.firstElementChild.firstElementChild;
+
   if (event.target.id === 'conteiner1') {
-    if (holder === null) {
+    if (holder === '') {
+      // console.log(firstChild)
+
+      
+
       holder = palito1.firstElementChild;
-    } else if (holder != null) {
-      palito1.appendChild(holder);
-      holder = null;
+    }
+    
+    else if (firstChild === null) {
+      
+      if (holder !== null) { 
+
+      console.log(holder)
+      palito1.prepend(holder);
+      holder = ''
+
+      }
+      
+    }
+    
+    else if (holder != '') {
+
+      if (holder !== null) { 
+
+        if (holder.clientWidth > firstChild.clientWidth) {
+          console.log(firstChild.clientWidth)
+          holder = '';
+        }
+        
+
+        if (holder.clientWidth < firstChild.clientWidth) { 
+        palito1.prepend(holder);
+        holder = '';
+        }
+      }
     }
   }
+
+
 
   if (event.target.id === 'conteiner2') {
-    if (holder === null) {
+    if (holder === '') {
       holder = palito2.firstElementChild;
-    } else if (holder != null) {
-      palito2.appendChild(holder);
-      holder = null;
+    }
+
+    
+    
+    else if (firstChild === null) {
+
+      if (holder !== null) { 
+
+        palito2.prepend(holder);
+        holder = ''
+
+      }
+      
+    }
+    
+    else if (holder != '') {
+
+      if (holder !== null) { 
+        console.log(holder)
+        console.log(firstChild)
+        if (holder.clientWidth > firstChild.clientWidth) {
+          holder = '';
+        }
+        
+        if (holder.clientWidth < firstChild.clientWidth) { 
+          palito2.prepend(holder);
+          holder = '';
+        }
+      }  
     }
   }
 
+
+
   if (event.target.id === 'conteiner3') {
-    if (holder === null) {
+    if (holder === '') {
       holder = palito3.firstElementChild;
-    } else if (holder != null) {
-      palito3.appendChild(holder);
-      holder = null;
+    }
+
+    else if (firstChild === null) {
+
+      if (holder !== null) { 
+
+        palito3.prepend(holder);
+        holder = ''
+
+      }
+    }
+    
+    else if (holder != '') {
+
+      if (holder !== null) {
+
+        if (holder.clientWidth > firstChild.clientWidth) {
+          console.log(firstChild.clientWidth)
+          holder = '';
+        }
+
+        if (holder.clientWidth < firstChild.clientWidth) { 
+        palito3.prepend(holder);
+        holder = '';
+        }
+      }
     }
   }
 }
@@ -70,7 +160,7 @@ function delay() {
 const ganhou = function () {
   for (var i = 0; i < contDisco3.length; i++)
     if (discos[i].towerCont3 != 3) {
-      return mensagem;
+      return alert('ye');
     }
 };
 
