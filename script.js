@@ -1,6 +1,55 @@
-const contDisco1 = document.getElementById('contDisco1');
-const contDisco2 = document.getElementById('contDisco2');
-const contDisco3 = document.getElementById('contDisco3');
+let body = document.getElementsByTagName("body");
+
+// criar palito
+
+let palito = document.createElement("div");
+palito.classList.add("palito")
+palito.id = "palito1"
+conteiner1.appendChild(palito)
+
+// criar 4 discos no palito
+
+let disk1 = document.createElement("div");
+disk1.classList.add("disco1")
+disk1.id = "D1"
+palito.appendChild(disk1)
+
+let disk2 = document.createElement("div");
+disk2.classList.add("disco2")
+disk2.id = "D2"
+palito.appendChild(disk2)
+
+let disk3 = document.createElement("div");
+disk3.classList.add("disco3")
+disk3.id = "D3"
+palito.appendChild(disk3)
+
+let disk4 = document.createElement("div");
+disk4.classList.add("disco4")
+disk4.id = "D4"
+palito.appendChild(disk4)
+
+// for(let i = 1; i <= 4; i++) {
+//   let disco = document.createElement("div");
+//   disco.classList.add("disco"+i)
+//   disco.id = "D" +i
+//   palito.appendChild(disco)
+// }
+
+
+//palito 2
+
+let palitoo = document.createElement("div");
+palitoo.classList.add("palito")
+palitoo.id = "palito2"
+conteiner2.appendChild(palitoo)
+
+//palito 3
+
+let palitooo = document.createElement("div");
+palitooo.classList.add("palito")
+palitooo.id = "palito3"
+conteiner3.appendChild(palitooo)
 
 const disco1 = document.getElementById('D1');
 const disco2 = document.getElementById('D2');
@@ -138,99 +187,9 @@ let firstChild =  event.currentTarget.firstElementChild.firstElementChild;
         }
       }
     }
-  }
-}
-
-const discos = document.getElementById('contdisco');
-
-const mensagem = document.getElementById('msg');
-const paragrafo = document.getElementById('para1');
-const span = document.getElementById('parabens');
-
-function disappear() {
-  mensagem.style.display = 'none';
-}
-
-function delay() {
-  setTimeout(function () {
-    disappear();
-  }, 2000);
-}
-
-const ganhou = function () {
-  for (var i = 0; i < contDisco3.length; i++)
-    if (discos[i].towerCont3 != 3) {
-      return alert('ye');
+    if (palito3.childElementCount === 4) {
+      alert("Parabens voce ganhou!!!")
     }
-};
+  }
 
-// function getDisc(event) {
-//   if (event.target.id === 'tower-cont1') {
-// console.log('tower1');
-//   }
-//   towerCont1.firstChild.appendChild(towerCont2);
-
-//   if (event.target.id === 'tower-cont2') {
-// console.log('tower2');
-// }
-
-// if (event.target.id === 'tower-cont3') {
-// console.log('tower3');
-// }
-//  }
-
-//-------------------------------------------------------------
-
-// const discos = document.getElementById("contdisco")
-
-// const mensagem = document.getElementById("msg");
-// const paragrafo = document.getElementById("para1")
-// const span = document.getElementById("parabens")
-
-// function disappear(){
-//     mensagem.style.display = "none";
-// }
-// disappear()
-
-// function delay(){
-//     setTimeout(function(){disappear()},2000);
-//   }
-// delay()
-
-// const ganhou = function(){
-//     for(var i = 0; i < contDisco3.length; i++)
-//     if(discos[i].towerCont3 !=3) {
-//         return mensagem
-//     };
-//    }
-
-// if (listen.target.id === 'palito3') {
-//   console.log('P3');
-// }
-
-// const regrasMovimento = (e) => {
-//   if (test.lastChild == disco2) {
-//     if (e.currentTarget.lastElementChild == disco1) {
-//       return false;
-//     }
-//   }
-//   if (test.lastChild == disco3) {
-//     if (e.currentTarget.lastElementChild == disco1) {
-//       return false;
-//     }
-//     if (e.currentTarget.lastElementChild == disco2) {
-//       return false;
-//     }
-//   }
-//   if (test.lastChild == disco4) {
-//     if (e.currentTarget.lastElementChild == disco3) {
-//       return false;
-//     }
-//     if (e.currentTarget.lastElementChild == disco2) {
-//       return false;
-//     }
-//     if (e.currentTarget.lastElementChild == disco1) {
-//       return false;
-//     }
-//   }
-// };
+}
